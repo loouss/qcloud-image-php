@@ -2,7 +2,7 @@
 腾讯云 [万象优图（Cloud Image）](https://www.qcloud.com/product/ci) SDK for PHP
 
 ## 安装（直接下载源码集成）
-####composer 
+#### composer 
 composer require loouss/qcloud-image-php-sdk
 
 调用请参考sample.php
