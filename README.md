@@ -2,8 +2,9 @@
 腾讯云 [万象优图（Cloud Image）](https://www.qcloud.com/product/ci) SDK for PHP
 
 ## 安装（直接下载源码集成）
-### 直接下载源码集成
-从github下载源码，并加载image-php-sdk-v2.0/index.php就可以了。
+####composer 
+composer require loouss/qcloud-image-php-sdk
+
 调用请参考sample.php
 
 ### 1. 在腾讯云申请业务的授权
@@ -17,8 +18,7 @@
 ### 2. 创建对应操作类的对象
 如果要使用图片，需要创建图片操作类对象
 
-	require_once __DIR__ . '/index.php';
-	use QcloudImage\CIClient;
+	use Qcloud\QcloudImage\CIClient;
 
 	$client = new CIClient('APP_ID', 'SECRET_ID', 'SECRET_KEY', 'BUCKET');
 	$client->setTimeout(30);
