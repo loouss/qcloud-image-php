@@ -1,0 +1,18 @@
+{
+    "name": "loouss/qcloud-image-php-sdk",
+    "description": "qcloud-image-php-sdk",
+    "authors": [
+        {
+            "name": "loouss",
+            "email": "loouss@outlook.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Qcloud\\": "src/"
+        }
+    }
+}
