@@ -1,6 +1,7 @@
 {
     "name": "loouss/qcloud-image-php",
     "description": "qcloud-image-php-sdk",
+    "license": "MIT",
     "authors": [
         {
             "name": "loouss",
