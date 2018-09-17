@@ -154,6 +154,34 @@ class CIClient
     }
 
     /**
+     * 人脸静态活体检测
+     * @param  array(associative) $picture   人脸静态活体检测
+     *                 * @param  array(associative) $picture
+     *                  url    array: 指定图片的url数组
+     *
+     * @return string    http请求响应
+     */
+    public function liveDetectPicture($url)
+    {
+        if (!$url || !is_string($url)) {
+            return Error::json(Error::$Param, 'param picture must be string');
+        }
+        $reqUrl = $this->conf->buildUrl('/face/livedetectpicture');
+        $headers = $this->baseHeaders();
+        $headers[] = 'Content-Type:application/json';
+        $files = $this->baseParams();
+        $files['url'] = $url;
+        $data = json_encode($files);
+        return $this->doRequest(array(
+            'url' => $reqUrl,
+            'method' => 'POST',
+            'data' => $data,
+            'header' => $headers,
+            'timeout' => $this->conf->timeout()
+        ));
+    }
+
+    /**
      * 身份证识别
      * @param  array(associative) $picture   识别的图片
      *                 * @param  array(associative) $pictures   Person的人脸图片
